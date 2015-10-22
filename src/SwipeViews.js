@@ -114,6 +114,7 @@ export default class SwipeViews extends React.Component {
   _transitionTo(selectedIndex) {
     if (this.props.onIndexChange) {
       this.props.onIndexChange(selectedIndex);
+      return;
     }
     if (!this.context.router) {
       return null;
