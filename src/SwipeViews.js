@@ -97,7 +97,7 @@ export default class SwipeViews extends React.Component {
       return null;
     }
     this.props.children.map((child, index) => {
-      var to = "";
+      var to = index;
       const isActive = this.context.router.isActive(to);
       if (isActive) {
         const translation = index * this.state.pageWidthPerCent;
@@ -120,7 +120,7 @@ export default class SwipeViews extends React.Component {
       return null;
     }
     const child = this.props.children[selectedIndex];
-    var to = "";
+    var to = selectedIndex;
     if (!this.context.router.isActive(to)) {
       this.context.router.transitionTo(to);
     }
